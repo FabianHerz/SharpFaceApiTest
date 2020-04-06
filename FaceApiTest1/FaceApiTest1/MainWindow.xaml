@@ -7,15 +7,22 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid x:Name="BackPanel">
-        <Image x:Name="FacePhoto" Stretch="Uniform" Margin="0,0,0,50" MouseMove="FacePhoto_MouseMove"  />
+        <Image x:Name="FacePhoto" Stretch="Uniform" Margin="0,0,461,98" MouseMove="FacePhoto_MouseMove"   />
+
         <DockPanel DockPanel.Dock="Bottom">
             <Button x:Name="BrowseButton" Width="72" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Left"
                      Content="Browse..." Click="BrowseButton_Click" />
+
             <StatusBar VerticalAlignment="Bottom">
                 <StatusBarItem>
                     <TextBlock Name="faceDescriptionStatusBar" />
                 </StatusBarItem>
             </StatusBar>
         </DockPanel>
+        <Button x:Name="browsebtn" Content="Browse" HorizontalAlignment="Left" Margin="692,65,0,0" VerticalAlignment="Top" Width="75" Click="Browsebtn_Click"/>
+        <Label Content="Name of person" HorizontalAlignment="Left" Margin="339,32,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txt_name" HorizontalAlignment="Left" Height="23" Margin="442,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="path" HorizontalAlignment="Left" Height="23" Margin="348,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="340"/>
+        <Button Content="Training" HorizontalAlignment="Left" Margin="693,94,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
     </Grid>
 </Window>

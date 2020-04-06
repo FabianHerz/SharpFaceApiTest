@@ -21,3 +21,44 @@ C:\Users\User\source\repos\FaceApiTest1\FaceApiTest1\obj\Debug\FaceApiTest1.cspr
 C:\Users\User\source\repos\FaceApiTest1\FaceApiTest1\obj\Debug\FaceApiTest1.csproj.CopyComplete
 C:\Users\User\source\repos\FaceApiTest1\FaceApiTest1\obj\Debug\FaceApiTest1.exe
 C:\Users\User\source\repos\FaceApiTest1\FaceApiTest1\obj\Debug\FaceApiTest1.pdb
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\bin\Debug\FaceApiTest1.exe.config
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\bin\Debug\FaceApiTest1.exe
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\bin\Debug\FaceApiTest1.pdb
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\bin\Debug\Microsoft.Azure.CognitiveServices.Vision.Face.dll
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\bin\Debug\Microsoft.Rest.ClientRuntime.Azure.dll
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\bin\Debug\Microsoft.Rest.ClientRuntime.dll
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\bin\Debug\Newtonsoft.Json.dll
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\bin\Debug\Microsoft.Rest.ClientRuntime.xml
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\bin\Debug\Microsoft.Rest.ClientRuntime.Azure.xml
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\bin\Debug\Newtonsoft.Json.xml
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\obj\Debug\FaceApiTest1.csprojAssemblyReference.cache
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\obj\Debug\MainWindow.g.cs
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\obj\Debug\App.g.cs
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\obj\Debug\FaceApiTest1_MarkupCompile.cache
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\obj\Debug\FaceApiTest1_MarkupCompile.lref
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\obj\Debug\MainWindow.baml
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\obj\Debug\FaceApiTest1.g.resources
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\obj\Debug\FaceApiTest1.Properties.Resources.resources
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\obj\Debug\FaceApiTest1.csproj.GenerateResource.cache
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\obj\Debug\FaceApiTest1.csproj.CoreCompileInputs.cache
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\obj\Debug\FaceApiTest1.csproj.CopyComplete
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\obj\Debug\FaceApiTest1.exe
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\obj\Debug\FaceApiTest1.pdb
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\bin\Debug\Microsoft.Win32.Primitives.dll
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\bin\Debug\System.AppContext.dll
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\bin\Debug\System.Console.dll
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\bin\Debug\System.Globalization.Calendars.dll
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\bin\Debug\System.IO.Compression.dll
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\bin\Debug\System.IO.Compression.ZipFile.dll
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\bin\Debug\System.IO.FileSystem.dll
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\bin\Debug\System.IO.FileSystem.Primitives.dll
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\bin\Debug\System.Net.Http.dll
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\bin\Debug\System.Net.Sockets.dll
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\bin\Debug\System.Security.Cryptography.Algorithms.dll
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\bin\Debug\System.Security.Cryptography.Encoding.dll
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\bin\Debug\System.Security.Cryptography.Primitives.dll
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\bin\Debug\System.Xml.ReaderWriter.dll
+E:\Учеба\Security app\SharpFaceApiTest\FaceApiTest1\FaceApiTest1\bin\Debug\System.Diagnostics.DiagnosticSource.xml

@@ -8,6 +8,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using Microsoft.Azure.CognitiveServices.Vision.Face;
 using Microsoft.Azure.CognitiveServices.Vision.Face.Models;
+using System.Windows.Forms;
+using MessageBox = System.Windows.Forms.MessageBox;
+using System.Linq;
+using System.Threading;
 
 namespace FaceApiTest1
 {
@@ -26,7 +30,6 @@ namespace FaceApiTest1
         private readonly IFaceClient faceClient = new FaceClient(
             new ApiKeyServiceClientCredentials(subscriptionKey),
             new System.Net.Http.DelegatingHandler[] { });
-
         // The list of detected faces.
         private IList<DetectedFace> faceList;
         // The list of descriptions for the detected faces.
@@ -36,6 +39,8 @@ namespace FaceApiTest1
 
         private const string defaultStatusBarText =
             "Place the mouse pointer over a face to see the face description.";
+
+
         public MainWindow()
         {
             InitializeComponent();
@@ -43,10 +48,11 @@ namespace FaceApiTest1
             if (Uri.IsWellFormedUriString(faceEndpoint, UriKind.Absolute))
             {
                 faceClient.Endpoint = faceEndpoint;
+
             }
             else
             {
-                MessageBox.Show(faceEndpoint,
+                System.Windows.MessageBox.Show(faceEndpoint,
                     "Invalid URI", MessageBoxButton.OK, MessageBoxImage.Error);
                 Environment.Exit(0);
             }
@@ -269,5 +275,107 @@ namespace FaceApiTest1
             // Return the built string.
             return sb.ToString();
         }
+        private static string personGroupId = "best_team_in_the_world";
+
+        private static string NamePerson;
+        private static string pathPerson;
+        private async void Browsebtn_Click(object sender, RoutedEventArgs e)
+        {
+            using (var fbd = new FolderBrowserDialog())
+            {
+                if (txt_name.Text.Length == 0)
+                {
+                    System.Windows.MessageBox.Show("Enter Name of Person",
+                        "Invalid URI", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+                DialogResult result = fbd.ShowDialog();
+
+                if (result == System.Windows.Forms.DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                {
+
+                    pathPerson = fbd.SelectedPath;
+                    path.Text = pathPerson;
+                }
+            }
+        }
+
+        private async void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Azure.CognitiveServices.Vision.Face.Models.Person friend1 = await faceClient.PersonGroupPerson.CreateAsync(personGroupId,"Semen");
+            foreach (string imagePath in Directory.GetFiles(pathPerson, "*.jpg"))
+            {
+                using (Stream s = File.OpenRead(imagePath))
+                {
+                    // Detect faces in the image and add to Anna
+                    await faceClient.PersonGroupPerson.AddFaceFromStreamAsync(
+                        personGroupId, friend1.PersonId, s);
+                }
+            }
+            await faceClient.PersonGroup.TrainAsync(personGroupId);
+            Microsoft.Azure.CognitiveServices.Vision.Face.Models.TrainingStatus trainingStatus = null;
+            while (true)
+            {
+                trainingStatus = await faceClient.PersonGroup.GetTrainingStatusAsync(personGroupId);
+
+                if (trainingStatus.Status != TrainingStatusType.Running)
+                {
+                    break;
+                }
+
+                await Task.Delay(1000);
+            }
+            string testImageFile = @"D:\Dawnloads Chrome\photo.jpg";
+
+            using (Stream s = File.OpenRead(testImageFile))
+            {
+                var faces = await faceClient.Face.DetectWithStreamAsync(s);
+                var faceIds = faces.Select(face => face.FaceId.Value).ToArray();
+
+                var results = await faceClient.Face.IdentifyAsync(faceIds, personGroupId);
+                foreach (var identifyResult in results)
+                {
+                    Console.WriteLine("Result of face: {0}", identifyResult.FaceId);
+                    if (identifyResult.Candidates.Count == 0)
+                    {
+                        Console.WriteLine("No one identified");
+                    }
+                    else
+                    {
+                        // Get top 1 among all candidates returned
+                        var candidateId = identifyResult.Candidates[0].PersonId;
+                        var person = await faceClient.PersonGroupPerson.GetAsync(personGroupId, candidateId);
+                        Console.WriteLine("Identified as {0}", person.Name);
+                    }
+                }
+            }
+        }
+        const int PersonCount = 10000;
+        const int CallLimitPerSecond = 10;
+        static Queue<DateTime> _timeStampQueue = new Queue<DateTime>(CallLimitPerSecond);
+
+        static async Task WaitCallLimitPerSecondAsync()
+        {
+            Monitor.Enter(_timeStampQueue);
+            try
+            {
+                if (_timeStampQueue.Count >= CallLimitPerSecond)
+                {
+                    TimeSpan timeInterval = DateTime.UtcNow - _timeStampQueue.Peek();
+                    if (timeInterval < TimeSpan.FromSeconds(1))
+                    {
+                        await Task.Delay(TimeSpan.FromSeconds(1) - timeInterval);
+                    }
+                    _timeStampQueue.Dequeue();
+                }
+                _timeStampQueue.Enqueue(DateTime.UtcNow);
+            }
+            finally
+            {
+                Monitor.Exit(_timeStampQueue);
+            }
+        }
+
     }
 }
+
